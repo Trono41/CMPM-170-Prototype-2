@@ -65,6 +65,12 @@ public class SimpleClickToHole : MonoBehaviour
 
     private IEnumerator SinkAndDestroy(GameObject building)
     {
+        FallingSoundPlayer soundPlayer = building.GetComponent<FallingSoundPlayer>();
+        if (soundPlayer != null)
+        {
+            soundPlayer.PlayRandomSound();
+        }
+
         float t = 0f;
         Vector3 start = building.transform.position;
         Vector3 end   = start + Vector3.down * sinkDepth;
