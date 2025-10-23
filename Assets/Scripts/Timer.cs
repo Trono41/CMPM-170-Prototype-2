@@ -5,11 +5,13 @@ public class Timer : MonoBehaviour
 {
     TextMeshProUGUI tmp;
     public float timer;
+    public GameObject gameEndText;
 
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
         tmp = GetComponent<TextMeshProUGUI>();
+        gameEndText.SetActive(false);
     }
 
     // Update is called once per frame
@@ -22,6 +24,12 @@ public class Timer : MonoBehaviour
         } else
         {
             tmp.text = (int)timer / 60 + ":" + (int)timer % 60;
+        }
+
+        if (timer <= 0)
+        {
+            tmp.text = " ";
+            gameEndText.SetActive(true);
         }
     }
 }
