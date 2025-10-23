@@ -4,7 +4,7 @@ using TMPro;
 public class Timer : MonoBehaviour
 {
     TextMeshProUGUI tmp;
-    float timer = 60f;
+    public float timer;
 
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
@@ -16,6 +16,12 @@ public class Timer : MonoBehaviour
     void Update()
     {
         timer -= Time.deltaTime;
-        tmp.text = "0:" + (int)timer;
+        if ((int)timer % 60 < 10)
+        {
+            tmp.text = (int)timer / 60 + ":0" + (int)timer % 60;
+        } else
+        {
+            tmp.text = (int)timer / 60 + ":" + (int)timer % 60;
+        }
     }
 }
