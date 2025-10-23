@@ -32,7 +32,7 @@ public class RandomSpawner : MonoBehaviour
             if (IsPositionValid(randomPos, spawned))
             {
                 GameObject randomObject = objectsToSpawn[Random.Range(0, objectsToSpawn.Length)];
-                Quaternion randomRotation = Quaternion.Euler(0, Random.Range(0f, 360f), 0);
+                Quaternion randomRotation = Quaternion.Euler(0, Random.Range(-120f, -180f), 0);
                 Instantiate(randomObject, randomPos, randomRotation);
                 spawnedPositions[spawned] = randomPos;
                 spawned++;
