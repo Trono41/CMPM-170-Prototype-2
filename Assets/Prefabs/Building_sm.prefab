@@ -12,6 +12,7 @@ GameObject:
   - component: {fileID: 5751770696742126665}
   - component: {fileID: -8684625916012033832}
   - component: {fileID: -9115913593414231098}
+  - component: {fileID: 5143152045176954638}
   m_Layer: 6
   m_Name: Building_sm
   m_TagString: Building
@@ -89,6 +90,24 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::HoverModelSwitcher
   replacementPrefab: {fileID: 919132149155446097, guid: 620fa98a3bc628c40858e42144736159, type: 3}
   replacementMesh: {fileID: 0}
+--- !u!114 &5143152045176954638
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7656948044090535200}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5d6f4d58e2aa89c4baea4200cd404478, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::BuildingRunAway
+  runDistance: 3
+  triggerRadius: 2
+  moveSpeed: 5
+  groundMask:
+    serializedVersion: 2
+    m_Bits: 1
 --- !u!1001 &5510578613937909501
 PrefabInstance:
   m_ObjectHideFlags: 0
