@@ -48,9 +48,12 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::FallingSoundPlayer
   fallSounds:
-  - {fileID: 8300000, guid: e5f8641dd13db804882a79ea7b3deb7b, type: 3}
-  - {fileID: 8300000, guid: 9847c2be76311a44a97a588f59740753, type: 3}
-  - {fileID: 8300000, guid: 55bb3f25cd75d3a4cb895ac4e627d61d, type: 3}
+  - {fileID: 8300000, guid: 232f829324f01874b899ab86d41460c1, type: 3}
+  - {fileID: 8300000, guid: d0ef277c120f23940a4d3cb789809761, type: 3}
+  - {fileID: 8300000, guid: 94fb157eb758cac4ea987ed7db68420c, type: 3}
+  - {fileID: 8300000, guid: 4588d4dbf1b33e6468d9cb790448fa26, type: 3}
+  - {fileID: 8300000, guid: 2c722099da09f604aa14097cf710210b, type: 3}
+  - {fileID: 8300000, guid: b8fccf463e3b57b4f99aeb47736824f5, type: 3}
 --- !u!65 &-8684625916012033832
 BoxCollider:
   m_ObjectHideFlags: 0
