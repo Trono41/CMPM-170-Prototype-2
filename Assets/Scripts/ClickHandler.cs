@@ -15,6 +15,12 @@ public class SimpleClickToHole : MonoBehaviour
     public float holeLifetime = 1.0f;
     public bool scaleHoleToRadius = true;
 
+
+    // same values from 
+    public float moveRadius = 10f;  
+    public float moveSpeed = 6f;    
+    public float pauseTime = 1f;
+
     void Update()
     {
         /* left click = generate hole */
@@ -41,6 +47,7 @@ public class SimpleClickToHole : MonoBehaviour
 
         /* if you add new buildings, make sure to set layer and tag to "Building" */
         GameObject[] buildings = GameObject.FindGameObjectsWithTag("Building");
+        Debug.Log(buildings);
         int sunkCount = 0;
 
         foreach (var b in buildings)
@@ -56,6 +63,7 @@ public class SimpleClickToHole : MonoBehaviour
                 if (col) col.enabled = false;
                 StartCoroutine(SinkAndDestroy(b));
                 sunkCount++;
+               
             }
         }
 
@@ -82,6 +90,25 @@ public class SimpleClickToHole : MonoBehaviour
             yield return null;
         }
 
-        Destroy(building);
+    //    relocate(building, buildings);
+          Destroy(building);
+    
+
+    
+        
     }
+
+   /** void relocate(GameObject building,  GameObject[] buildingsarray) {
+        Vector2 newPos;
+        float x = Random.Range(5, 20);
+        float y = Random.Range(5, 20);
+        float z = Random.Range(5, 20);
+        newPos = new Vector3(x, y, z);
+
+        GameObject building_replace = Instantiate(building, newPos);
+        buildingsarray.add(building_replace);
+        Destroy(building);
+       
+
+    } **/
 }

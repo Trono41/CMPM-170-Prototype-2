@@ -15,6 +15,12 @@ public class TopDownCamera : MonoBehaviour
         if (kb.aKey.isPressed) move += Vector3.left;
         if (kb.dKey.isPressed) move += Vector3.right;
 
+        if (kb.escapeKey.isPressed) {
+            Application.Quit();
+            Debug.Log("Quitting");
+
+        }
+
         transform.Translate(move * moveSpeed * Time.deltaTime, Space.World);
     }
 }
