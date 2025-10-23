@@ -98,7 +98,7 @@ public class SimpleClickToHole : MonoBehaviour
         
     }
 
-   /** void relocate(GameObject building,  GameObject[] buildingsarray) {
+    /*void relocate(GameObject building,  GameObject[] buildingsarray) {
         Vector2 newPos;
         float x = Random.Range(5, 20);
         float y = Random.Range(5, 20);
@@ -110,5 +110,5 @@ public class SimpleClickToHole : MonoBehaviour
         Destroy(building);
        
 
-    } **/
+    }*/
 }
