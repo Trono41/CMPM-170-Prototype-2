@@ -8,7 +8,6 @@ public class FunnyHoverHandler : MonoBehaviour
     public LayerMask hoverLayer;
 
     private GameObject currentHoverObject;
-    // No swap state: model swapping is handled by HoverModelSwitcher attached on objects
 
     [Tooltip("Maximum jitter distance from base position")] public float jitterAmplitude = 0.05f;
     [Tooltip("Oscillation speed for jitter")] public float jitterFrequency = 12f;
@@ -22,7 +21,18 @@ public class FunnyHoverHandler : MonoBehaviour
     public float teleportCooldown = 1.0f;
     public AudioClip teleportClip;
     public AudioSource teleportAudioSource;
+    [Range(0f,1f)] public float teleportVolume = 1f;
     private float lastTeleportTime = -999f;
+
+    void Awake()
+    {
+        if (teleportAudioSource == null)
+        {
+            teleportAudioSource = gameObject.AddComponent<AudioSource>();
+        }
+        teleportAudioSource.spatialBlend = 0f; // force 2D/global
+        teleportAudioSource.playOnAwake = false;
+    }
 
     void Update()
     {
@@ -88,16 +98,9 @@ public class FunnyHoverHandler : MonoBehaviour
                 jitterBasePosition = newPos;
                 lastTeleportTime = Time.time;
 
-                if (teleportClip != null)
+                if (teleportClip != null && teleportAudioSource != null)
                 {
-                    if (teleportAudioSource != null)
-                    {
-                        teleportAudioSource.PlayOneShot(teleportClip);
-                    }
-                    else
-                    {
-                        AudioSource.PlayClipAtPoint(teleportClip, newPos);
-                    }
+                    teleportAudioSource.PlayOneShot(teleportClip, teleportVolume);
                 }
 
                 return;
@@ -119,6 +122,8 @@ public class FunnyHoverHandler : MonoBehaviour
         Vector3 offset = new Vector3(dx, dy, dz);
         jitterTransform.position = jitterBasePosition + offset;
     }
+
+    
 
     private void OnHoverExit(GameObject obj)
     {

@@ -448,10 +448,11 @@ MonoBehaviour:
   jitterAmplitude: 5
   jitterFrequency: 20
   teleportChancePerSecond: 10
-  teleportRadius: 2
-  teleportCooldown: 1
+  teleportRadius: 60
+  teleportCooldown: 5
   teleportClip: {fileID: 8300000, guid: 6a9d1c9269985d64bba5b33b272997a2, type: 3}
   teleportAudioSource: {fileID: 0}
+  teleportVolume: 1
 --- !u!1 &1143487891
 GameObject:
   m_ObjectHideFlags: 0
