@@ -9,8 +9,8 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 8050203948276782893}
-  - component: {fileID: 5751770696742126665}
   - component: {fileID: -8684625916012033832}
+  - component: {fileID: 5751770696742126665}
   - component: {fileID: -9115913593414231098}
   - component: {fileID: 5143152045176954638}
   m_Layer: 6
@@ -36,25 +36,6 @@ Transform:
   - {fileID: 5472783328302024982}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: -180, z: 0}
---- !u!114 &5751770696742126665
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7656948044090535200}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: da172a59bfb8b9240a66e4afa6200bc2, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::FallingSoundPlayer
-  fallSounds:
-  - {fileID: 8300000, guid: 232f829324f01874b899ab86d41460c1, type: 3}
-  - {fileID: 8300000, guid: d0ef277c120f23940a4d3cb789809761, type: 3}
-  - {fileID: 8300000, guid: 94fb157eb758cac4ea987ed7db68420c, type: 3}
-  - {fileID: 8300000, guid: 4588d4dbf1b33e6468d9cb790448fa26, type: 3}
-  - {fileID: 8300000, guid: 2c722099da09f604aa14097cf710210b, type: 3}
-  - {fileID: 8300000, guid: b8fccf463e3b57b4f99aeb47736824f5, type: 3}
 --- !u!65 &-8684625916012033832
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -76,6 +57,29 @@ BoxCollider:
   serializedVersion: 3
   m_Size: {x: 2.0761042, y: 2.0724146, z: 2.131459}
   m_Center: {x: -0.0033906896, y: 0.19448212, z: 0.2851114}
+--- !u!114 &5751770696742126665
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7656948044090535200}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: da172a59bfb8b9240a66e4afa6200bc2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::FallingSoundPlayer
+  fallSounds:
+  - {fileID: 8300000, guid: 232f829324f01874b899ab86d41460c1, type: 3}
+  - {fileID: 8300000, guid: d0ef277c120f23940a4d3cb789809761, type: 3}
+  - {fileID: 8300000, guid: 94fb157eb758cac4ea987ed7db68420c, type: 3}
+  - {fileID: 8300000, guid: 4588d4dbf1b33e6468d9cb790448fa26, type: 3}
+  - {fileID: 8300000, guid: 2c722099da09f604aa14097cf710210b, type: 3}
+  - {fileID: 8300000, guid: b8fccf463e3b57b4f99aeb47736824f5, type: 3}
+  - {fileID: 8300000, guid: 1dd35ec397330064988cdc35eaa36c4c, type: 3}
+  - {fileID: 8300000, guid: aff9b104c7df2ea45bfec64bf79e3df0, type: 3}
+  - {fileID: 8300000, guid: 269b04d13230a4447a707e26bc92b75d, type: 3}
+  - {fileID: 8300000, guid: 427d0a08f40a07c4eb7a3692be33c59e, type: 3}
 --- !u!114 &-9115913593414231098
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -102,12 +106,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5d6f4d58e2aa89c4baea4200cd404478, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::BuildingRunAway
-  runDistance: 3
-  triggerRadius: 2
+  moveRadius: 10
   moveSpeed: 5
-  groundMask:
-    serializedVersion: 2
-    m_Bits: 1
+  pauseTime: 1
 --- !u!1001 &5510578613937909501
 PrefabInstance:
   m_ObjectHideFlags: 0

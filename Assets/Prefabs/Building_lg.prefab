@@ -76,6 +76,10 @@ MonoBehaviour:
   - {fileID: 8300000, guid: 4588d4dbf1b33e6468d9cb790448fa26, type: 3}
   - {fileID: 8300000, guid: 2c722099da09f604aa14097cf710210b, type: 3}
   - {fileID: 8300000, guid: b8fccf463e3b57b4f99aeb47736824f5, type: 3}
+  - {fileID: 8300000, guid: 1dd35ec397330064988cdc35eaa36c4c, type: 3}
+  - {fileID: 8300000, guid: aff9b104c7df2ea45bfec64bf79e3df0, type: 3}
+  - {fileID: 8300000, guid: 269b04d13230a4447a707e26bc92b75d, type: 3}
+  - {fileID: 8300000, guid: 427d0a08f40a07c4eb7a3692be33c59e, type: 3}
 --- !u!114 &-641231674162188951
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -102,12 +106,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5d6f4d58e2aa89c4baea4200cd404478, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::BuildingRunAway
-  runDistance: 3
-  triggerRadius: 2
+  moveRadius: 10
   moveSpeed: 5
-  groundMask:
-    serializedVersion: 2
-    m_Bits: 1
+  pauseTime: 1
 --- !u!1001 &3121773182371545540
 PrefabInstance:
   m_ObjectHideFlags: 0
