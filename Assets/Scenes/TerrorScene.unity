@@ -1359,6 +1359,9 @@ MonoBehaviour:
   sinkDuration: 1
   holeLifetime: 1
   scaleHoleToRadius: 1
+  moveRadius: 10
+  moveSpeed: 6
+  pauseTime: 1
 --- !u!4 &2121422135
 Transform:
   m_ObjectHideFlags: 0
